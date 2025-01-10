@@ -47,6 +47,7 @@
 #let design-header-alignment = <<design.header.alignment>>
 #let design-highlights-summary-left-margin = <<design.highlights.summary_left_margin>>
 #let design-highlights-bullet = "<<design.highlights.bullet>>"
+#let design-subhighlights-bullet = "<<design.subhighlights.bullet>>"
 #let design-highlights-top-margin = <<design.highlights.top_margin>>
 #let design-highlights-left-margin = <<design.highlights.left_margin>>
 #let design-highlights-vertical-space-between-highlights = <<design.highlights.vertical_space_between_highlights>>
@@ -118,6 +119,15 @@
 )
 
 // Highlights settings:
+#let subhighlights(..content) = {
+  list(
+    ..content,
+    marker: design-subhighlights-bullet,
+    spacing: design-highlights-vertical-space-between-highlights,
+    indent: design-highlights-left-margin,
+    body-indent: design-highlights-horizontal-space-between-bullet-and-highlights,
+  )
+}
 #let highlights(..content) = {
   list(
     ..content,

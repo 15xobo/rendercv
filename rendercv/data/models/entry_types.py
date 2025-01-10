@@ -356,7 +356,7 @@ class EntryBase(EntryWithDate):
         ),
         examples=["2020-09-24", "present"],
     )
-    highlights: Optional[list[str]] = pydantic.Field(
+    highlights: Optional[list] = pydantic.Field(
         default=None,
         title="Highlights",
         description="The highlights of the event as a list of strings.",

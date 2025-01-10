@@ -723,6 +723,11 @@ theme_options_highlights_field_info = pydantic.Field(
     title="Highlights",
     description="Options related to highlights.",
 )
+theme_options_subhighlights_field_info = pydantic.Field(
+    default=Highlights(),
+    title="Subhighlights",
+    description="Options related to subhighlights.",
+)
 theme_options_entry_types_field_info = pydantic.Field(
     default=EntryTypes(),
     title="Templates",
@@ -740,4 +745,5 @@ class ThemeOptions(RenderCVBaseModelWithoutExtraKeys):
     section_titles: SectionTitles = theme_options_section_titles_field_info
     entries: Entries = theme_options_entries_field_info
     highlights: Highlights = theme_options_highlights_field_info
+    subhighlights: Highlights = theme_options_subhighlights_field_info
     entry_types: EntryTypes = theme_options_entry_types_field_info
